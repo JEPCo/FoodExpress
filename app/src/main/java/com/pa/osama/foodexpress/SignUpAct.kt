@@ -37,9 +37,15 @@ class SignUpAct : AppCompatActivity() {
                     var sr = object:StringRequest(Request.Method.POST, web,
                             Response.Listener { response ->
                                 pd.hide()
-                                AppInfo.mobile = signup_phone_et.text.toString()
-                                startActivity(Intent(this, MenuAct::class.java))
-                                finish()
+                                if (response == "0") {
+                                    Toast.makeText(this, "Mobile Already Used", Toast.LENGTH_LONG).show()
+
+                                } else
+                                {
+                                    AppInfo.mobile = signup_phone_et.text.toString()
+                                    startActivity(Intent(this, MenuAct::class.java))
+                                    finish()
+                                }
 
                             },
                             Response.ErrorListener { error ->
