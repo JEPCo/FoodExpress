@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.design.widget.TabLayout
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
@@ -14,11 +15,25 @@ import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.Volley
 import kotlinx.android.synthetic.main.activity_menu.*
 
-class MenuAct : AppCompatActivity() {
+class MenuAct : AppCompatActivity(), TabLayout.OnTabSelectedListener {
+
+    override fun onTabReselected(tab: TabLayout.Tab?) {
+
+    }
+
+    override fun onTabUnselected(tab: TabLayout.Tab?) {
+
+    }
+
+    override fun onTabSelected(tab: TabLayout.Tab) {
+        Toast.makeText(this, tab.text, Toast.LENGTH_SHORT).show()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
+
+        menu_cat_tabs.addOnTabSelectedListener(this)
 
         var web = AppInfo.url + "get_cat.php"
         var pd = ProgressDialog(this)
