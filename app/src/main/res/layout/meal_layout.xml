@@ -17,7 +17,7 @@
         app:srcCompat="@mipmap/ic_launcher" />
 
     <TextView
-        android:id="@+id/meal_name_tv"
+        android:id="@+id/cart_name_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -28,7 +28,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/meal_price_tv"
+        android:id="@+id/cart_price_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -36,7 +36,7 @@
         android:layout_marginTop="10dp"
         android:text="TextView"
         app:layout_constraintStart_toEndOf="@+id/meal_photo_iv"
-        app:layout_constraintTop_toBottomOf="@+id/meal_name_tv" />
+        app:layout_constraintTop_toBottomOf="@+id/cart_name_tv" />
 
     <ImageView
         android:id="@+id/meal_add_iv"
@@ -46,6 +46,6 @@
         android:layout_marginStart="21dp"
         android:layout_marginTop="17dp"
         app:layout_constraintStart_toEndOf="@+id/meal_photo_iv"
-        app:layout_constraintTop_toBottomOf="@+id/meal_price_tv"
+        app:layout_constraintTop_toBottomOf="@+id/cart_price_tv"
         app:srcCompat="@drawable/add" />
 </android.support.constraint.ConstraintLayout>

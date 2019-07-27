@@ -6,8 +6,10 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.TabLayout
+import android.support.v7.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.LinearLayout
 import android.widget.Toast
 import com.android.volley.Request
 import com.android.volley.Response
@@ -26,7 +28,31 @@ class MenuAct : AppCompatActivity(), TabLayout.OnTabSelectedListener {
     }
 
     override fun onTabSelected(tab: TabLayout.Tab) {
-        Toast.makeText(this, tab.text, Toast.LENGTH_SHORT).show()
+        var web = AppInfo.url + "get_items.php?category=" + tab.text
+        var pd = ProgressDialog(this)
+        pd.setMessage("Please Wait ..")
+        pd.setProgressStyle(ProgressDialog.STYLE_SPINNER)
+        pd.show()
+        var rq= Volley.newRequestQueue(this)
+        var jar = JsonArrayRequest(Request.Method.GET, web, null,
+                Response.Listener { response ->
+                    pd.hide()
+                    var list= ArrayList<Meal>()
+                    for (x in 0..response.length()-1)
+                        list.add(Meal(response.getJSONObject(x).getInt("id"),
+                                response.getJSONObject(x).getString("name"),
+                                response.getJSONObject(x).getDouble("price"),
+                                response.getJSONObject(x).getString("photo")))
+                    var rvAdapter = MealRVAdapter(this, list)
+                    menu_rv.adapter = rvAdapter
+                    menu_rv.layoutManager = LinearLayoutManager(this)
+                },
+                Response.ErrorListener { error ->
+                    pd.hide()
+                    Toast.makeText(this, error.message, Toast.LENGTH_LONG).show()
+
+                })
+        rq.add(jar)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -71,6 +97,11 @@ class MenuAct : AppCompatActivity(), TabLayout.OnTabSelectedListener {
             AppInfo.mobile = ""
             startActivity(Intent(this, MainActivity::class.java))
             finish()
+        }
+
+        if (item.itemId == R.id.item_cart)
+        {
+            startActivity(Intent(this, CartAct::class.java))
         }
         return super.onOptionsItemSelected(item)
     }

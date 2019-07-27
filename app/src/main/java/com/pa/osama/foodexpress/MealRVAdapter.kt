@@ -21,7 +21,9 @@ class MealRVAdapter(var con:Context, var mealList: ArrayList<Meal>) : RecyclerVi
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder?, position: Int) {
         (holder as MyMeal).show(mealList[position].name, mealList[position].price, mealList[position].photo)
         (holder as MyMeal).itemView.meal_add_iv.setOnClickListener {
-
+            AppInfo.itemid = mealList[position].id
+            var obj = QtyFragment()
+            obj.show((con as MenuAct).supportFragmentManager, "Qty")
         }
     }
 
@@ -29,8 +31,8 @@ class MealRVAdapter(var con:Context, var mealList: ArrayList<Meal>) : RecyclerVi
     {
         fun show(nm: String, pr: Double, ph: String)
         {
-            itemView.meal_name_tv.text = nm
-            itemView.meal_price_tv.text = pr.toString()
+            itemView.cart_name_tv.text = nm
+            itemView.cart_price_tv.text = pr.toString()
             var pho = ph.replace(" ", "%20")
             Picasso.get().load(AppInfo.url + "images/" + pho).into(itemView.meal_photo_iv)
         }
