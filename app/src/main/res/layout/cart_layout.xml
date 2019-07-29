@@ -57,14 +57,10 @@
         android:id="@+id/cart_delete_iv"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginBottom="48dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginLeft="25dp"
-        android:layout_marginRight="20dp"
         android:layout_marginStart="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/cart_name_tv"
+        app:layout_constraintStart_toEndOf="@+id/cart_total_tv"
         app:srcCompat="@drawable/delete" />
 </android.support.constraint.ConstraintLayout>
