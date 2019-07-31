@@ -22,7 +22,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SignUpAct" />
-        <activity android:name=".CartAct"></activity>
+        <activity android:name=".CartAct" />
+        <activity android:name=".PaypalAct"></activity>
     </application>
 
 </manifest>

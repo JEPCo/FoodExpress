@@ -2,6 +2,7 @@ package com.pa.osama.foodexpress
 
 import android.annotation.SuppressLint
 import android.app.ProgressDialog
+import android.content.Intent
 import android.location.Location
 import android.location.LocationListener
 import android.location.LocationManager
@@ -32,7 +33,9 @@ class CartAct : AppCompatActivity() {
                     var rq = Volley.newRequestQueue(applicationContext)
                     var sr = object : StringRequest(Request.Method.POST, web,
                             Response.Listener { response ->
-                                
+                               m.removeUpdates(this)
+                               startActivity(Intent(applicationContext, PaypalAct::class.java))
+
                             }
                             ,Response.ErrorListener {error ->
                         Toast.makeText(applicationContext, error.message, Toast.LENGTH_LONG).show()
