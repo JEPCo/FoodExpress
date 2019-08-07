@@ -23,7 +23,8 @@
         </activity>
         <activity android:name=".SignUpAct" />
         <activity android:name=".CartAct" />
-        <activity android:name=".PaypalAct"></activity>
+        <activity android:name=".PaypalAct" />
+        <activity android:name=".ChatAct"></activity>
     </application>
 
 </manifest>

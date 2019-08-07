@@ -103,6 +103,11 @@ class MenuAct : AppCompatActivity(), TabLayout.OnTabSelectedListener {
         {
             startActivity(Intent(this, CartAct::class.java))
         }
+
+        if (item.itemId == R.id.item_chat)
+        {
+            startActivity(Intent(this, ChatAct::class.java))
+        }
         return super.onOptionsItemSelected(item)
     }
 }

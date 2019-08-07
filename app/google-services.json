@@ -1,0 +1,122 @@
+{
+  "project_info": {
+    "project_number": "1030588989314",
+    "firebase_url": "https://fir-app-d61cb.firebaseio.com",
+    "project_id": "fir-app-d61cb",
+    "storage_bucket": "fir-app-d61cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1030588989314:android:9dfbac07e745cafa",
+        "android_client_info": {
+          "package_name": "com.osama.aaa.firebaseapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1030588989314-oomhigfb8h9pb4b9jccpq9661fj48acg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.osama.aaa.firebaseapp",
+            "certificate_hash": "542d66d9e90d8697c30ca440128114b96d9a1a0e"
+          }
+        },
+        {
+          "client_id": "1030588989314-ereidgkgqfa5rqvpk9pt9osv7pjaqcdl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCG9lzDY7Veqx0odt0G7sij0SK9s7rlDl4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1030588989314-ereidgkgqfa5rqvpk9pt9osv7pjaqcdl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1030588989314:android:588b8d273807e077",
+        "android_client_info": {
+          "package_name": "com.osama.aaa.rtdb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1030588989314-qc3i4ucdl2olp7eigabjnae080pocjj3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.osama.aaa.rtdb",
+            "certificate_hash": "542d66d9e90d8697c30ca440128114b96d9a1a0e"
+          }
+        },
+        {
+          "client_id": "1030588989314-ereidgkgqfa5rqvpk9pt9osv7pjaqcdl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCG9lzDY7Veqx0odt0G7sij0SK9s7rlDl4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1030588989314-ereidgkgqfa5rqvpk9pt9osv7pjaqcdl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1030588989314:android:61f59ee383548265",
+        "android_client_info": {
+          "package_name": "com.pa.osama.foodexpress"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1030588989314-f1ahtbfqnkdgq3bmdujhme1cdi980gr5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pa.osama.foodexpress",
+            "certificate_hash": "542d66d9e90d8697c30ca440128114b96d9a1a0e"
+          }
+        },
+        {
+          "client_id": "1030588989314-ereidgkgqfa5rqvpk9pt9osv7pjaqcdl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCG9lzDY7Veqx0odt0G7sij0SK9s7rlDl4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1030588989314-ereidgkgqfa5rqvpk9pt9osv7pjaqcdl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
