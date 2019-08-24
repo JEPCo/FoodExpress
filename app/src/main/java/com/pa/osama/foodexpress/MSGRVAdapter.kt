@@ -20,7 +20,12 @@ class MSGRVAdapter(var con: Context, var list: ArrayList<ChatModel>) : RecyclerV
         return list.size
     }
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder?, position: Int) {
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        if (list[position].mobile == AppInfo.mobile)
+            (holder as SentHolder).show(list[position].message)
+        else
+            (holder as RecHolder).show(list[position].message)
+
 
     }
 
@@ -35,7 +40,7 @@ class MSGRVAdapter(var con: Context, var list: ArrayList<ChatModel>) : RecyclerV
     {
         fun show(msg: String)
         {
-            var tv = itemView.findViewById<TextView>(R.id.msg_tv)
+            var tv = itemView.findViewById<TextView>(R.id.msg_tv_se)
             tv.text = msg
         }
     }
@@ -44,7 +49,7 @@ class MSGRVAdapter(var con: Context, var list: ArrayList<ChatModel>) : RecyclerV
     {
         fun show(msg: String)
         {
-            var tv = itemView.findViewById<TextView>(R.id.msg_tv)
+            var tv = itemView.findViewById<TextView>(R.id.msg_tv_re)
             tv.text = msg
         }
     }
